@@ -1,7 +1,8 @@
-require('./db/connect');
+
 const express=require('express');
 require('dotenv').config();
 const tasks=require('./routes/task');
+const connectDB=require('./db/connect');
 const app=express();
 
 
@@ -17,6 +18,12 @@ app.use('/api/v1/tasks',tasks);
 
 
 const port=8080;
-
-app.listen(port,()=>{
-    console.log(`listening on port ${port}....`)});
+const start=async()=>{
+try{
+await connectDB(process.env.MOngo_URI)
+app.listen(port,()=>{console.log(`listening on port ${port}....`)});
+} catch(error){
+console.log(error)
+}
+}
+start();
