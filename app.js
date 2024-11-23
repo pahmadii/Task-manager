@@ -1,3 +1,4 @@
+require('./db/connect');
 const express=require('express');
 require('dotenv').config();
 const tasks=require('./routes/task');
