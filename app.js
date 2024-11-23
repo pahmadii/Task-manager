@@ -12,6 +12,7 @@ app.get('/',(req,res)=>{
 res.send('get all tasks')
 })
 
+app.use('/',tasks);
 
 
 const port=8080;
