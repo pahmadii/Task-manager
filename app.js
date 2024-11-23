@@ -12,7 +12,7 @@ app.get('/',(req,res)=>{
 res.send('get all tasks')
 })
 
-app.use('/',tasks);
+app.use('/api/v1/tasks',tasks);
 
 
 const port=8080;
