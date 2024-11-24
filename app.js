@@ -11,9 +11,6 @@ app.use(express.static('public'));
 
 
 
-app.get('/',(req,res)=>{
-res.send('get all tasks')
-})
 
 app.use('/api/v1/tasks',tasks);
 
