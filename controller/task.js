@@ -1,3 +1,5 @@
+const Task=require('../models/task');
+
 const getAllTask=(req,res)=>{
 res.send('get tasks')
 };
