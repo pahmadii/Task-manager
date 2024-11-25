@@ -21,7 +21,7 @@ app.use(errorHandlerMiddleware);
 
 
 
-const port=8080;
+const port=process.env.PORT || 8080;
 const start=async()=>{
 try{
 await connectDB(process.env.MOngo_URI)
